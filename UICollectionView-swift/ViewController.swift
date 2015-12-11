@@ -15,7 +15,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        dataArr = [["icon":"1","name":"汽车1"],["icon":"2","name":"汽车2"],["icon":"3","name":"汽车3"]]
+        dataArr = [["icon":"1","name":"汽车1"],["icon":"2","name":"汽车2"],["icon":"3","name":"汽车3"],["icon":"1","name":"汽车1"],["icon":"2","name":"汽车2"],["icon":"3","name":"汽车3"]]
        let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.minimumLineSpacing = 20;
         collectionVIew = UICollectionView(frame: CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height), collectionViewLayout: collectionViewLayout)
@@ -26,6 +26,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         collectionVIew!.registerNib(UINib(nibName: "NameCell", bundle: nil
             ), forCellWithReuseIdentifier: "cell")
         collectionVIew!.reloadData()
+
         
     }
     
@@ -50,9 +51,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
     }
     
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-////        return
-//    }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 20, left: 20, bottom: 50, right: 20)
