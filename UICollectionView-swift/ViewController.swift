@@ -48,7 +48,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let size = CGSize(width: 130, height: 130)
         return size
-        
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
